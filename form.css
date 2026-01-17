@@ -1,0 +1,158 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PAGE */
+body {
+  height: 100vh;
+  background: #e6e9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 900px;
+  height: fit-content;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+/* LEFT SIDE (IMAGE) */
+.left {
+  width: 50%;
+  background: linear-gradient(
+      rgba(128, 0, 255, 0.65),
+      rgba(128, 0, 255, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1497032628192-86f99bcd76bc");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.left .overlay {
+  padding: 30px;
+}
+
+.left h2 {
+  font-size: 22px;
+}
+
+.left p {
+  margin: 8px 0;
+}
+
+.left span {
+  font-weight: bold;
+}
+
+/* RIGHT SIDE (SPA FORM STYLE) */
+.right {
+  width: 50%;
+  padding: 40px;
+  background: linear-gradient(135deg, #2b1055, #6a0572, #b5179e);
+  color: white;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* FORM */
+form {
+  width: 100%;
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ERROR TEXT */
+small {
+  display: block;
+  margin-top: -14px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  color: #ffd6e0;
+}
+
+/* BUTTON */
+button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 45px;
+  border-radius: 25px;
+  border: none;
+  background: white;
+  color: #6a0572;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  margin: 180px auto;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    height: 220px;
+  }
+}
