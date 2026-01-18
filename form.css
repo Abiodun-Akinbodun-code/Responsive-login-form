@@ -96,8 +96,18 @@ input {
   outline: none;
 }
 
-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.password-box {
+  position: relative;
+}
+.password-box span{
+    position: absolute;
+    right: 12px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 13px;
+    color: white;
+    opacity: 0.8;
 }
 
 /* ERROR TEXT */
@@ -153,6 +163,6 @@ button {
   }
 
   .left {
-    height: 220px;
+    height: 320px;
   }
 }

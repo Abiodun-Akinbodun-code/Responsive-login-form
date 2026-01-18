@@ -1,7 +1,17 @@
 const form = document.getElementById("form");
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("close");
+const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
 
+ togglePassword.addEventListener("click", function () {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    togglePassword.innerText = "Hide";
+  } else {
+    passwordInput.type = "password";
+    togglePassword.innerText = "Show";
+  }
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -12,10 +22,14 @@ form.addEventListener("submit", function (e) {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const confirm = document.getElementById("confirm").value;
+  
+ 
 
   const nameRegex = /^[a-zA-Z ]{3,}$/;
   const namesRegex = /^[a-zA-Z ]{3,}$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+});
+
 
   if (!nameRegex.test(name)) {
     nameError.innerText = "Enter at least 3 letters";
@@ -48,4 +62,4 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-// closeBtn.onclick = () => modal.style.display = "none";
+closeBtn.onclick = () => modal.style.display = "none";
